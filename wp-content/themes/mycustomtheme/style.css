@@ -1,0 +1,266 @@
+/*
+Theme Name: MyCustomTheme
+Text Domain: MyCustomTheme
+Version: 1.0
+Description: Stom theme
+Tags: stom theme
+Author: Mohamed Jamil AYARI
+*/
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #ee3577;
+    --red: #dc3545;
+    --orange: #f68e62;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #767575;
+    --gray-dark: #434242;
+    --primary: #6f42c1;
+    --secondary: #4f4f4f;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #c2c2c2;
+    --lightgray: #eeeeee;
+    --dark: #434242;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    /*background: var(--primary);*/
+    background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%, var(--primary) 100%) !important;
+    max-height: 100px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    /*position: fixed;
+    z-index: 1;*/
+}
+
+.show {
+    max-height: 300px;
+    opacity: 1;
+}
+
+header .logo {
+    width: 130px;
+}
+
+header .mobile-logo {
+    width: 130px;
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    padding: 10px;
+}
+
+.slogan {
+    color: white;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+header nav #navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav #navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+header nav #navigation a:hover {
+    text-decoration: underline;
+    background-color: #ee3577;
+}
+
+header nav #navigation li {
+    list-style-type: none;
+}
+
+.sub-menu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header nav #navigation li:hover {
+}
+
+header nav #navigation .ul-class {
+    display: flex;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    display: none;
+}
+
+.menu-icon-container {
+    /*border: solid 1px black;*/
+    border-radius: 5px;
+    margin: 5px;
+}
+.menu-icon {
+    padding: 7px;
+    /*border: solid 1px white;*/
+    border-radius: 5px;
+}
+
+header .mobile-logo {
+    display: none;
+}
+
+.hide-logo {
+    display: none;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    margin-left: 0px;
+    padding: 0px;
+    background: var(--primary);
+    border-radius: 5px;
+    z-index: 1;
+    /*margin-top: 8px;*/
+}
+
+.ul-class li:hover > .sub-menu {
+    display: block; /* Show submenu on hover */
+}
+
+.btn-custom {
+    background-color: #ee3577;
+    border-color: #ee3577;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #a82b57;
+    border-color: #a82b57;
+}
+
+.page-head {
+    position: relative;
+    height: 135px;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.page-head h1 {
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    color: white;
+}
+
+.breadcrumb {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #333;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #555;
+}
+
+.breadcrumb-separator {
+    margin: 0 5px;
+    color: #777;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-toggler-icon {
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        max-height: 57px;
+        overflow: hidden;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    header .mobile-logo {
+        display: block;
+    }
+
+    header .mobile-logo-2 {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    header nav #navigation .ul-class {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav #navigation li {
+        width: 210px;
+    }
+
+    .sub-menu {
+        position: relative;
+        margin-left: 20px;
+        padding: 0px;
+        background: none;
+    }
+
+    .show {
+        max-height: 445px;
+    }
+    
+}
+
+
